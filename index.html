@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Erosão do Solo</title>
+
+    <!-- Estilo CSS externo -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- p5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js" defer></script>
+    <!-- Sketch JS principal -->
+    <script src="sketch.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>🌧️ Simulador de Erosão do Solo</h1>
+      <p>
+        Escolha o tipo de solo abaixo e veja como a chuva afeta a erosão ao
+        longo do tempo:
+      </p>
+
+      <div class="controls" role="group" aria-label="Tipos de solo">
+        <button onclick="setSoilType('vegetacao')" aria-label="Solo com vegetação">
+          🌿 Vegetação
+        </button>
+        <button onclick="setSoilType('exposto')" aria-label="Solo exposto">
+          🟤 Exposto
+        </button>
+        <button onclick="setSoilType('urbanizado')" aria-label="Área urbanizada">
+          🏙️ Urbanizado
+        </button>
+      </div>
+
+      <div id="canvas-holder" aria-label="Simulação de erosão do solo"></div>
+    </main>
+  </body>
+</html>
